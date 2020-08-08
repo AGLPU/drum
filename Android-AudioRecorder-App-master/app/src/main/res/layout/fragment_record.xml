@@ -7,7 +7,7 @@
     android:clipChildren="false"
 >
 
-  <in.aman.piano.audiovisualization.GLAudioVisualizationView
+  <in.aman.piano2.audiovisualization.GLAudioVisualizationView
       android:id="@+id/visualizer_view"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -658,7 +658,7 @@
 
     </RelativeLayout>
   </HorizontalScrollView>
-  <in.aman.piano.theme.ThemedFab
+  <in.aman.piano2.theme.ThemedFab
       android:id="@+id/play_list_btn"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -672,7 +672,7 @@
       app:rippleColor="@color/primary"
   />
 
-  <in.aman.piano.theme.ThemedFab
+  <in.aman.piano2.theme.ThemedFab
       android:id="@+id/settings_btn"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -686,7 +686,7 @@
       app:rippleColor="@color/primary"
   />
 
-  <in.aman.piano.theme.ThemedFab
+  <in.aman.piano2.theme.ThemedFab
       android:id="@+id/btnRecord"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -715,7 +715,7 @@
       app:layout_constraintTop_toTopOf="parent"/>
 
 
-  <in.aman.piano.theme.ThemedFab
+  <in.aman.piano2.theme.ThemedFab
       android:id="@+id/btnPause"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -726,13 +726,5 @@
       app:layout_constraintRight_toRightOf="parent"
       app:rippleColor="@color/primary_light"
   />
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3136435737091654/3885932324">
-    </com.google.android.gms.ads.AdView>
 
 </android.support.constraint.ConstraintLayout>

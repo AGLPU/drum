@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="in.aman.piano">
+    package="in.aman.piano2">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -8,41 +8,41 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="in.aman.piano.AudioRecorderApp"
+        android:name="in.aman.piano2.AudioRecorderApp"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3136435737091654~2057566095"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="715207945895834"/>
+
+
         <activity
-            android:name="in.aman.piano.activities.MainActivity"
+            android:name="in.aman.piano2.activities.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTop"
             android:screenOrientation="landscape">
 
         </activity>
         <activity
-            android:name="in.aman.piano.activities.DrumBeats"
+            android:name="in.aman.piano2.activities.DrumBeats"
             android:label="Lets Play Drum"
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name="in.aman.piano.activities.SettingsActivity"
+            android:name="in.aman.piano2.activities.SettingsActivity"
             android:label="@string/action_settings"
-            android:parentActivityName="in.aman.piano.activities.MainActivity"
+            android:parentActivityName="in.aman.piano2.activities.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="in.aman.piano.activities.MainActivity" />
+                android:value="in.aman.piano2.activities.MainActivity" />
         </activity>
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="in.aman.piano.fileprovider"
+            android:authorities="in.aman.piano2.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -50,18 +50,18 @@
                 android:resource="@xml/filepaths" />
         </provider>
 
-        <service android:name="in.aman.piano.recordingservice.AudioRecordService" />
+        <service android:name="in.aman.piano2.recordingservice.AudioRecordService" />
 
         <activity
-            android:name="in.aman.piano.activities.PlayListActivity"
-            android:parentActivityName="in.aman.piano.activities.MainActivity"
+            android:name="in.aman.piano2.activities.PlayListActivity"
+            android:parentActivityName="in.aman.piano2.activities.MainActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="in.aman.piano.activities.MainActivity" />
+                android:value="in.aman.piano2.activities.MainActivity" />
         </activity>
         <activity
-            android:name="in.aman.piano.activities.SplashActivity"
+            android:name="in.aman.piano2.activities.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_splash"
             android:screenOrientation="portrait"
@@ -72,6 +72,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.facebook.ads.AudienceNetworkActivity" android:hardwareAccelerated="true"
+            />
     </application>
 
 </manifest>
